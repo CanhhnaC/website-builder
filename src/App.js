@@ -1,23 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component }  from 'react';
+import 'antd/dist/antd.css';
+import Spinner from "./components/spinner";
+import './styles/App.css';
+import Badger from "./components/badge";
+import Radio from "./components/radiobutton"
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <button className="btnI">IOS</button>
+      <button className="btnA">ANDROID</button>
+      <Spinner/>
+      <Badger/>
+      <Radio/>
     </div>
   );
 }
