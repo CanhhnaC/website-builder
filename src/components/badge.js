@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Badge } from 'antd';
-import { ClockCircleOutlined } from '@ant-design/icons';
+import 'antd/dist/antd.css';
 import '../styles/badge.css';
 
 function Badger() {

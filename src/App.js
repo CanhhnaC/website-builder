@@ -1,9 +1,8 @@
 import React, { Component }  from 'react';
-import 'antd/dist/antd.css';
 import Spinner from "./components/spinner";
-import './styles/App.css';
 import Badger from "./components/badge";
-import Radio from "./components/radiobutton"
+import Radio from "./components/radiobutton";
+import './styles/App.css';
 
 function App() {
   return (

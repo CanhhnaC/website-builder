@@ -1,14 +1,33 @@
-import React, { Component } from 'react';
-import {Spin} from 'antd';
+import React from "react";
 import '../styles/spinner.css';
 
 function Spinner() {
-
-  return (
-    <>
-     <Spin className="centerS"/>
-    </>
-  );
+    // IOS true, ANDROID false
+    let LoadingSpinner = true;
+    if (LoadingSpinner) {
+        return <div class="lds-spinner centerS">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    }
+    else {
+        return <div class="lds-ring centerS">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    }    
 }
 
 export default Spinner;
