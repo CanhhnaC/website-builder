@@ -2,19 +2,19 @@ import React from 'react';
 import 'antd/dist/antd.css';
 import '../styles/radio.css';
 
-function Radio() {
-    // IOS true, ANDROID false
-    let radiobtn = true;
-    if (radiobtn) {
+function Radio({ os }) {
+    if (os) {
         return (
-            <div className="list-group">
-                <input type="checkbox" name="CheckBoxInputName" defaultValue="Value1" id="CheckBox1" />
-                <label className="list-group-item" htmlFor="CheckBox1">CheckBox1</label>
-                <input type="checkbox" name="CheckBoxInputName" defaultValue="Value2" id="CheckBox2" />
-                <label className="list-group-item" htmlFor="CheckBox2">CheckBox2</label>
-                <input type="checkbox" name="CheckBoxInputName" defaultValue="Value3" id="CheckBox3" />
-                <label className="list-group-item" htmlFor="CheckBox3">CheckBox3</label>
-            </div>);
+            <form>
+                <div className="list-group">
+                    <input type="checkbox" name="CheckBoxInputName" defaultValue="Value1" id="CheckBox1" />
+                    <label className="list-group-item" htmlFor="CheckBox1">CheckBox1</label>
+                    <input type="checkbox" name="CheckBoxInputName" defaultValue="Value2" id="CheckBox2" />
+                    <label className="list-group-item" htmlFor="CheckBox2">CheckBox2</label>
+                    <input type="checkbox" name="CheckBoxInputName" defaultValue="Value3" id="CheckBox3" />
+                    <label className="list-group-item" htmlFor="CheckBox3">CheckBox3</label>
+                </div>
+            </form>);
     }
     else {
         return (
@@ -32,5 +32,20 @@ function Radio() {
             </div>);
     }
 }
+
+// function Radio({ os }) {
+//     return (
+//         <form >
+//             <div className={`list-group${os && "-ad"}`}>
+//                 <input type={os ? 'checkbox' : 'radio'} name={os ? 'CheckBoxInputName' : 'radio'} defaultValue="Value1" id="CheckBox1" />
+//                 <label className="list-group-item" htmlFor={os ? 'CheckBox1':'Radio1'}>CheckBox1</label>
+//                 <input type={os ? 'checkbox' : 'radio'} name={os ? 'CheckBoxInputName' : 'radio'} defaultValue="Value2" id="CheckBox2" />
+//                 <label className="list-group-item" htmlFor={os ? 'CheckBox2':'Radio2'}>CheckBox2</label>
+//                 <input type={os ? 'checkbox' : 'radio'} name={os ? 'CheckBoxInputName' : 'radio'} defaultValue="Value3" id="CheckBox3" />
+//                 <label className="list-group-item" htmlFor={os ? 'CheckBox3':'Radio3'}>CheckBox3</label>
+//             </div>
+//         </form>
+//     )
+// }
 
 export default Radio;

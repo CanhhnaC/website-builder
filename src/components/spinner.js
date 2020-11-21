@@ -1,10 +1,13 @@
 import React from "react";
 import '../styles/spinner.css';
+import styled from 'styled-components';
 
-function Spinner() {
-    // IOS true, ANDROID false
-    let LoadingSpinner = true;
-    if (LoadingSpinner) {
+function Spinner({ os, color }) {
+
+    const colorSpinner = styled.div`
+        color: "red";
+    `;
+    if (os) {
         return <div class="lds-spinner centerS">
             <div></div>
             <div></div>
@@ -27,7 +30,7 @@ function Spinner() {
             <div></div>
             <div></div>
         </div>
-    }    
+    }
 }
 
 export default Spinner;

@@ -29,7 +29,7 @@ input{
 }
 
 .list-group input[type="checkbox"]:checked+.list-group-item {
-    color: blue;
+    color: #0a60ff;
     border-bottom: 1px solid #a8a8a8;
 }
 
@@ -67,5 +67,5 @@ input{
 }
 
 .list-group-ad input[type="radio"]:checked+.list-group-item:after {
-    color: blue;
+    color:#0a60ff;
 }
