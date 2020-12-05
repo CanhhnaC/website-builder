@@ -35,18 +35,12 @@ input{
 
 .list-group input[type="checkbox"]:checked+.list-group-item:after {
     color: inherit;
-    padding-left: 150px;
+    padding-left: 180px;
 }
 
 
 /* ANDROID */
-.list-group-ad{
-    display: flex;
-    flex-direction: column;
-    margin-top: 50px;
-}
 input{
-    border-bottom: 1px solid #a8a8a8;
     margin-left: 230px;
     margin-bottom: -17px;
     margin-top: 6px;
@@ -55,17 +49,14 @@ input{
     user-select: none;
     margin-left: 10px;
     margin-right: 10px;
-}
-
-.list-group-ad input[type="radio"]+.list-group-item {
-    cursor: pointer;
     border-bottom: 1px solid #a8a8a8;
+
 }
 
-.list-group-ad input[type="radio"]:checked+.list-group-item {
-    color: inherit;
+.list-group input[type="radio"]+.list-group-item {
+    cursor: pointer;
 }
 
-.list-group-ad input[type="radio"]:checked+.list-group-item:after {
+.list-group input[type="radio"]:checked+.list-group-item {
     color:#0a60ff;
 }

@@ -1,15 +1,22 @@
-import React, { Component } from 'react';
-import { Badge } from 'antd';
-import 'antd/dist/antd.css';
-import '../styles/badge.css';
+import React from "react";
+import { Badge } from "antd";
+import "antd/dist/antd.css";
 
-function Badger() {
+const colorBadge = {
+  primary: "blue",
+  success: "green",
+  info: "#529FFA", 
+  warning: "yellow",
+  danger: "red",
+};
 
+function Badger({ color, count }) {
   return (
-     <Badge count={5}>
-      <a href="#" className="head-example centerB" />
+    <Badge count={count} style={{ backgroundColor: colorBadge[color] }}>
+      <a href="/" className="head-example centerB">
+        {""}
+      </a>
     </Badge>
-  
   );
 }
 
