@@ -27,7 +27,7 @@ function App() {
         ANDROID
       </button>
 
-      <Spinner os={!isAndroid} color="white" />
+      <Spinner os={!isAndroid} color="green" />
       <Badger color="info" count={5} />
       <Radio os={!isAndroid} data={data} color= "green" />
     </div>
