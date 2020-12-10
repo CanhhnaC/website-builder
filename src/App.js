@@ -15,21 +15,21 @@ function App() {
   return (
     <div className="App">
       <button
-        className={isAndroid ? "btnI" : "btnA"}
-        onClick={() => setIsAndroid(true)}
+        className={!isAndroid ? "btnI" : "btnA"}
+        onClick={() => setIsAndroid(false)}
       >
         IOS
       </button>
       <button
-        className={!isAndroid ? "btnI" : "btnA"}
-        onClick={() => setIsAndroid(false)}
+        className={isAndroid ? "btnI" : "btnA"}
+        onClick={() => setIsAndroid(true)}
       >
         ANDROID
       </button>
 
-      <Spinner os={isAndroid} color="green" />
+      <Spinner os={!isAndroid} color="green" />
       <Badger color="info" count={5} />
-      <Radio os={isAndroid} data={data} color="green" />
+      <Radio os={!isAndroid} data={data} color="green" />
     </div>
   );
 }
